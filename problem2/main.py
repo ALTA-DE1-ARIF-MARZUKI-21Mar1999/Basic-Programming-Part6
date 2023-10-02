@@ -1,5 +1,13 @@
 def caesar(offset, input_str):
-    return ''
+    result = ""
+    for char in input_str:
+        if char.isalpha():
+            shift = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - shift + offset) % 26 + shift)
+        else:
+            result += char
+    
+    return result
 
 if __name__ == '__main__':
     print(caesar(3, "abc")) # def

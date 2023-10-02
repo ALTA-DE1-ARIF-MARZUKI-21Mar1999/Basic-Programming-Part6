@@ -1,5 +1,15 @@
 def remove_duplicates(array):
-    return 0
+    # return 0
+    if not array:
+        return 0
+
+    unik_count = 1
+
+    for i in range(1, len(array)):
+        if array[i] != array[i - 1]:
+            unik_count += 1
+
+    return unik_count
 
 if __name__ == '__main__':
     print(remove_duplicates([2, 3, 3, 3, 6, 9, 9])) # 4
