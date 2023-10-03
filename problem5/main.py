@@ -1,5 +1,5 @@
 def remove_duplicates(array):
-    # return 0
+    
     if not array:
         return 0
 
